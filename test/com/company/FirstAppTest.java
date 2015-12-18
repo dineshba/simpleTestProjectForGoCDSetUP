@@ -9,14 +9,8 @@ import static org.junit.Assert.assertTrue;
 public class FirstAppTest {
 
     @Test
-    public void firstAppMethod() {
-        FirstApp firstApp = new FirstApp();
-        assertTrue(firstApp.getValue());
-    }
-
-    @Test
     public void shouldReturnTrue() {
         FirstApp firstApp = new FirstApp();
-        assertThat(firstApp.getValue(), is(false));
+        assertThat(firstApp.getValue(), is(true));
     }
 }
