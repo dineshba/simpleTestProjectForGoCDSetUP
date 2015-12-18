@@ -9,6 +9,17 @@ sourceCompatibility = 1.5
 repositories {
     mavenCentral()
 }
+configurations {
+    unitTestCompile.extendsFrom runtime
+    unitTestRuntime.extendsFrom unitTestCompile
+}
+sourceSets {
+    test {
+        java.srcDir file('src/com/company')
+        java.srcDir file('test/com/company')
+
+    }
+}
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
